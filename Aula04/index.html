@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de VueJS</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <h3>{{ assunto }}</h3>
+        <ul>
+            <li v-for="item in linguagens">{{ item }}</li>
+            <li v-for="(item, index) in linguagens">{{ index }} - {{ item.nome }}</li>
+        </ul>
+    </div>
+
+
+    <!-- Diretiva v-for -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aula 4 - VueJS!",
+                assunto: "Diretiva v-for",
+                linguagens: [
+                    { nome: "Javascript" },
+                    { nome: "PHP" },
+                    { nome: "C#" },
+                    { nome: "Java" },
+                    { nome: "Phyton" },
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

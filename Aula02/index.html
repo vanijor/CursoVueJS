@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de VueJS</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-if="statuts">{{ titulo }}</h1>        
+        <h3>{{ assunto }}</h3>
+        <h1 v-else>Não Existe Título</h1>
+        <p v-show="status">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nesciunt atque ipsum aspernatur ea accusantium neque, repudiandae perspiciatis. Esse voluptatum voluptates eum minus suscipit ratione sapiente tempora. Nihil, amet voluptates!</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aula 2 - VueJS!",
+                assunto: "o que são diretivas?",
+                status: true
+            }
+        });
+    </script>
+</body>
+</html>

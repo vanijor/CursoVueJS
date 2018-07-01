@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de VueJS</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-if="status">{{ titulo }}</h1>
+        <h3>{{ assunto }}</h3>
+        <h1 v-else>Não Existe Título</h1>
+        <p v-show="status">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nesciunt atque ipsum aspernatur ea accusantium neque, repudiandae perspiciatis. Esse voluptatum voluptates eum minus suscipit ratione sapiente tempora. Nihil, amet voluptates!</p>
+        <div v-if="usuario.nome == 'Helio'">
+            Id: {{ usuario.id }},<br>
+            Nome: {{ usuario.nome }},<br>
+            Profissão: {{ usuario.profissao }}
+        </div>
+        <div v-else>Não existe Usuário com esse Nome</div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aula 3 - VueJS!",
+                assunto: "Diretivas vshow, v-if, v-else",
+                status: true,
+                usuario: {
+                    id: 1,
+                    nome: "Jorge",
+                    profissao: "Ator"
+                }
+            }
+        });
+    </script>
+</body>
+</html>

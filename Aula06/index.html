@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de VueJS</title>
+    <style>
+        .red{color:red;}
+        .green{color:green;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <h3>{{ assunto }}</h3>
+        <img v-bind:src="imagem" v-bind:alt="'VueJS is awesome!'"><!-- funciona sem variável colocando entre aspas simples -->
+        <img 
+            :src="imagem" 
+            :alt="'VueJS is awesome!'"
+        >
+        <p :class="classHtml">TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO </p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aula 6 - VueJS!",
+                assunto: "Diretiva v-bind",
+                imagem: "../img/1.png",
+                classHtml: "green"
+            }
+        });
+    </script>
+</body>
+</html>
